@@ -25,7 +25,7 @@ namespace RegExSample
         public void Validation()
         {
             Regex regex = new Regex(passwordPattern);
-            Console.WriteLine("UC6 Rule2 password Validation ");
+            Console.WriteLine("UC7 Rule3 password Validation ");
             foreach (string word in passwordInputs)
             {
                 if (regex.IsMatch(word))
