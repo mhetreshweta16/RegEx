@@ -19,13 +19,13 @@ namespace RegExSample
         string mobileNoPattern = "^[1-9]{2}[ ]{1}[0-9]{10}$";
 
         //password validation
-        string[] passwordInputs = {"shwetacm","shweta","Shweta","shwetacmpp","mhetresc" };
-        string passwordPattern = "^[a-z]{8}$";
+        string[] passwordInputs = {"S1etacms","Shweta1","Shwet4cm","Shweacmpp1","Mhetress" ,"shwEta1m","shweta16"};
+        string passwordPattern = "^(?=.*[0-9])(?=.*[A-Z])[a-zA-Z0-9]{8}$";
 
         public void Validation()
         {
             Regex regex = new Regex(passwordPattern);
-            Console.WriteLine("UC5 password Validation ");
+            Console.WriteLine("UC6 Rule2 password Validation ");
             foreach (string word in passwordInputs)
             {
                 if (regex.IsMatch(word))
