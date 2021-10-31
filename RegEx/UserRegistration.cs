@@ -15,13 +15,18 @@ namespace RegExSample
         string lastNamePattern = "^[A-Z]{1}[a-z]{2}$";
         string[] emailInputs = {"abc.xyz@bl.co.in","abc@bl.co.in","abc.x@gm.co.in","abc.xyzbl.co.in","abc,xyz@bl.in","ab.xyz@bl.co.in","abc.nxcst@bl.co.in" };
         string emailPattern = "^[a-z]{3}[.][a-z]*[@]{1}[bl]{2}[.]{1}[co]{2}[.]{1}[a-z]*$";
-        string[] mobileNoInputs = {"91 8686531051", "01 8686531051", "918686531051", "91 86865310", "91 0123344556", "91 868653105112" };
-        string mobileNoPattern = "[1-9]{2}[ ]{1}[0-9]{10}";
+        string[] mobileNoInputs = {"91 8686531051", "01 8686531051", "918686531051", "91 86865310", "91 0123344556", "91 868653105112", "912 8686531051" };
+        string mobileNoPattern = "^[1-9]{2}[ ]{1}[0-9]{10}$";
+
+        //password validation
+        string[] passwordInputs = {"shwetacm","shweta","Shweta","shwetacmpp","mhetresc" };
+        string passwordPattern = "^[a-z]{8}$";
+
         public void Validation()
         {
-            Regex regex = new Regex(emailPattern);
-            Console.WriteLine("UC3 Email Validation ");
-            foreach (string word in emailInputs)
+            Regex regex = new Regex(passwordPattern);
+            Console.WriteLine("UC5 password Validation ");
+            foreach (string word in passwordInputs)
             {
                 if (regex.IsMatch(word))
                 {
