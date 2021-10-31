@@ -19,9 +19,9 @@ namespace RegExSample
         string mobileNoPattern = "[1-9]{2}[ ]{1}[0-9]{10}";
         public void Validation()
         {
-            Regex regex = new Regex(lastNamePattern);
-            Console.WriteLine("UC2 Email Validation ");
-            foreach (string word in lastNameInputs)
+            Regex regex = new Regex(emailPattern);
+            Console.WriteLine("UC3 Email Validation ");
+            foreach (string word in emailInputs)
             {
                 if (regex.IsMatch(word))
                 {
