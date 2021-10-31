@@ -9,14 +9,19 @@ namespace RegExSample
 {
     class UserRegistration
     {
-        string[] inputs = { "Shw","shw","Shweta","XYz","Xyz" };
-        string pattern = "^[A-Z]{1}[a-z]{2}$";
-
-        public void firstNameValidation()
+        string[] firstNameInputs = { "Shw","shw","Shweta","XYz","Xyz" };
+        string firstNamePattern = "^[A-Z]{1}[a-z]{2}$";
+        string[] lastNameInputs = { "Mhe","mhe","Mhetre","MhE","Cpm"};
+        string lastNamePattern = "^[A-Z]{1}[a-z]{2}$";
+        string[] emailInputs = {"abc.xyz@bl.co.in","abc@bl.co.in","abc.x@gm.co.in","abc.xyzbl.co.in","abc,xyz@bl.in","ab.xyz@bl.co.in","abc.nxcst@bl.co.in" };
+        string emailPattern = "^[a-z]{3}[.][a-z]*[@]{1}[bl]{2}[.]{1}[co]{2}[.]{1}[a-z]*$";
+        string[] mobileNoInputs = {"91 8686531051", "01 8686531051", "918686531051", "91 86865310", "91 0123344556", "91 868653105112" };
+        string mobileNoPattern = "[1-9]{2}[ ]{1}[0-9]{10}";
+        public void Validation()
         {
-            Regex regex = new Regex(pattern);
-            Console.WriteLine("UC1 First Name Validation ");
-            foreach (string word in inputs)
+            Regex regex = new Regex(lastNamePattern);
+            Console.WriteLine("UC2 Email Validation ");
+            foreach (string word in lastNameInputs)
             {
                 if (regex.IsMatch(word))
                 {

@@ -8,7 +8,7 @@ namespace RegExSample
         {
             //Console.WriteLine("Hello World!");
             UserRegistration registration = new UserRegistration();
-            registration.firstNameValidation();
+            registration.Validation();
             /*RegexPattern pattern = new RegexPattern();
             pattern.checkingPattern();*/
 
